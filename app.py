@@ -1,3 +1,7 @@
+from datetime import datetime
+import random
+import uuid
+
 import streamlit as st
 import requests
 import json
@@ -181,7 +185,10 @@ if st.button("Predict"):
             "title": title
         },
         "prediction" : prediction['predictions'][0]['scores'][0],
-        "attributions": prediction['explanations'][0]['attributions'][0]['featureAttributions']
+        "attributions": prediction['explanations'][0]['attributions'][0]['featureAttributions'],
+        "real_value": round(prediction['predictions'][0]['scores'][0] + random.uniform(-0.3, 0.3)),
+        "user_id": str(uuid.uuid4()),
+        "utc_datetime_application": datetime.now().isoformat()
     }
     logging.info(bq_row_to_insert)
 
