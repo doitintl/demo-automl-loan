@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import requests
 import json
 import numpy as np
@@ -54,7 +55,7 @@ st.title('Google AutoML Tables Loan Prediction')
 st.markdown('This Google AutoML Tables example uses the Lending Club dataset https://www.kaggle.com/wordsforthewise/lending-club')
 st.markdown('Lending Club is a peer-to-peer lending company that matches borrowers with investors through an online platform. It services people that need personal loans between $1,000 and $40,000. Borrowers receive the full amount of the issued loan minus the origination fee, which is paid to the company. Investors purchase notes backed by the personal loans and pay Lending Club a service fee. The company shares data about all loans issued through its platform during certain time periods.')
 
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
     annualIncome = st.number_input(
@@ -129,3 +130,6 @@ if st.button("Predict"):
     
 
     st.write(prediction)
+
+
+components.iframe("https://creditdecisioningdemo.cloud.looker.com/embed/dashboards-next/1", height=1000, scrolling=True)
