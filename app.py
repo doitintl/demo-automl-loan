@@ -51,8 +51,8 @@ def getPrediction(
 
 st.set_page_config(layout="wide")
 
-st.title('Google AutoML Tables Loan Prediction')
-st.markdown('This Google AutoML Tables example uses the Lending Club dataset https://www.kaggle.com/wordsforthewise/lending-club')
+st.title('Google Vertex AU Loan Prediction')
+st.markdown('This Google Vertex AI example uses the Lending Club dataset https://www.kaggle.com/wordsforthewise/lending-club')
 st.markdown('Lending Club is a peer-to-peer lending company that matches borrowers with investors through an online platform. It services people that need personal loans between $1,000 and $40,000. Borrowers receive the full amount of the issued loan minus the origination fee, which is paid to the company. Investors purchase notes backed by the personal loans and pay Lending Club a service fee. The company shares data about all loans issued through its platform during certain time periods.')
 
 col1, col2 = st.columns(2)
